@@ -20,23 +20,28 @@ const Technologies = () => {
           
           {/* Card 1: tDCS */}
           <div className="flex flex-col text-center group">
+            {/* Circuit Track Node */}
+            <div className="relative flex justify-center py-3 w-full">
+              {/* Connecting Line to next card */}
+              <div className="hidden md:block absolute top-1/2 left-1/2 w-[calc(100%+2.5rem)] lg:w-[calc(100%+4rem)] -translate-y-1/2 z-0">
+                <div className="w-full border-t-2 border-dashed border-[#486CD9]/40"></div>
+                <div className="absolute top-1/2 left-0 w-2 h-2 rounded-full bg-[#486CD9] shadow-[0_0_8px_rgba(72,108,217,0.8)] animate-pulse-travel-1"></div>
+              </div>
+              {/* Glowing Dot */}
+              <div className="w-4 h-4 rounded-full bg-[#486CD9] relative z-20 shadow-[0_0_12px_rgba(72,108,217,0.6)]"></div>
+            </div>
+
+            {/* Acronym Label */}
+            <div className="font-display text-2xl xl:text-3xl font-bold text-[#132758] tracking-wide mb-6 relative z-20">
+              tDCS
+            </div>
+
             <div className="mb-2 transition-transform duration-500 ease-out group-hover:scale-[1.03] relative z-20">
               <img src="/what-2.png" alt="tDCS Technology" className="w-full h-auto rounded-3xl object-contain drop-shadow-sm bg-white" />
             </div>
 
-            {/* Circuit Track Node */}
-            <div className="relative flex justify-center py-6 w-full">
-              {/* Connecting Line to next card */}
-              <div className="hidden md:block absolute top-1/2 left-1/2 w-[calc(100%+2.5rem)] lg:w-[calc(100%+4rem)] h-[2px] bg-[#486CD9]/30 -translate-y-1/2 -z-10"></div>
-              {/* Glowing Dot */}
-              <div className="w-4 h-4 rounded-full bg-white border-[3px] border-[#486CD9] relative z-20 shadow-[0_0_12px_rgba(72,108,217,0.6)]"></div>
-            </div>
-
-            {/* Text & Watermark */}
+            {/* Text */}
             <div className="relative pt-6 pb-2 px-2 z-10 flex-grow">
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-[6rem] xl:text-[7rem] font-display font-bold text-[#F1F5F9] -z-10 select-none leading-none tracking-tighter w-full">
-                 tDCS
-              </div>
               <h3 className="font-display text-[1.25rem] font-bold text-[#132758] mb-4 leading-tight relative z-20">
                 Wakes up the circuits that fall quiet.
               </h3>
@@ -48,23 +53,28 @@ const Technologies = () => {
 
           {/* Card 2: EEG */}
           <div className="flex flex-col text-center group">
+            {/* Circuit Track Node */}
+            <div className="relative flex justify-center py-3 w-full">
+              {/* Connecting Line to next card */}
+              <div className="hidden md:block absolute top-1/2 left-1/2 w-[calc(100%+2.5rem)] lg:w-[calc(100%+4rem)] -translate-y-1/2 z-0">
+                <div className="w-full border-t-2 border-dashed border-[#486CD9]/40"></div>
+                <div className="absolute top-1/2 left-0 w-2 h-2 rounded-full bg-[#486CD9] shadow-[0_0_8px_rgba(72,108,217,0.8)] animate-pulse-travel-2"></div>
+              </div>
+              {/* Glowing Dot */}
+              <div className="w-4 h-4 rounded-full bg-[#486CD9] relative z-20 shadow-[0_0_12px_rgba(72,108,217,0.6)]"></div>
+            </div>
+
+            {/* Acronym Label */}
+            <div className="font-display text-2xl xl:text-3xl font-bold text-[#132758] tracking-wide mb-6 relative z-20">
+              EEG
+            </div>
+
             <div className="mb-2 transition-transform duration-500 ease-out group-hover:scale-[1.03] relative z-20">
               <img src="/what-3.png" alt="EEG Technology" className="w-full h-auto rounded-3xl object-contain drop-shadow-sm bg-white" />
             </div>
 
-            {/* Circuit Track Node */}
-            <div className="relative flex justify-center py-6 w-full">
-              {/* Connecting Line to next card */}
-              <div className="hidden md:block absolute top-1/2 left-1/2 w-[calc(100%+2.5rem)] lg:w-[calc(100%+4rem)] h-[2px] bg-[#486CD9]/30 -translate-y-1/2 -z-10"></div>
-              {/* Glowing Dot */}
-              <div className="w-4 h-4 rounded-full bg-white border-[3px] border-[#486CD9] relative z-20 shadow-[0_0_12px_rgba(72,108,217,0.6)]"></div>
-            </div>
-
-            {/* Text & Watermark */}
+            {/* Text */}
             <div className="relative pt-6 pb-2 px-2 z-10 flex-grow">
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-[6rem] xl:text-[7rem] font-display font-bold text-[#F1F5F9] -z-10 select-none leading-none tracking-tighter w-full">
-                 EEG
-              </div>
               <h3 className="font-display text-[1.25rem] font-bold text-[#132758] mb-4 leading-tight relative z-20">
                 Listens to the brain as it changes.
               </h3>
@@ -76,22 +86,24 @@ const Technologies = () => {
 
           {/* Card 3: CET */}
           <div className="flex flex-col text-center group">
+            {/* Circuit Track Node */}
+            <div className="relative flex justify-center py-3 w-full">
+              {/* Last card: No line extending right */}
+              {/* Glowing Dot */}
+              <div className="w-4 h-4 rounded-full bg-[#486CD9] relative z-20 shadow-[0_0_12px_rgba(72,108,217,0.6)]"></div>
+            </div>
+
+            {/* Acronym Label */}
+            <div className="font-display text-2xl xl:text-3xl font-bold text-[#132758] tracking-wide mb-6 relative z-20">
+              CET
+            </div>
+
             <div className="mb-2 transition-transform duration-500 ease-out group-hover:scale-[1.03] relative z-20">
               <img src="/what-4.png" alt="CET Technology" className="w-full h-auto rounded-3xl object-contain drop-shadow-sm bg-white" />
             </div>
 
-            {/* Circuit Track Node */}
-            <div className="relative flex justify-center py-6 w-full">
-              {/* Last card: No line extending right */}
-              {/* Glowing Dot */}
-              <div className="w-4 h-4 rounded-full bg-white border-[3px] border-[#486CD9] relative z-20 shadow-[0_0_12px_rgba(72,108,217,0.6)]"></div>
-            </div>
-
-            {/* Text & Watermark */}
+            {/* Text */}
             <div className="relative pt-6 pb-2 px-2 z-10 flex-grow">
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-[6rem] xl:text-[7rem] font-display font-bold text-[#F1F5F9] -z-10 select-none leading-none tracking-tighter w-full">
-                 CET
-              </div>
               <h3 className="font-display text-[1.25rem] font-bold text-[#132758] mb-4 leading-tight relative z-20">
                 Trains the mind while it heals.
               </h3>
