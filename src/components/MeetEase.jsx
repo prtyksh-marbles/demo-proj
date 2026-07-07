@@ -79,6 +79,10 @@ const MeetEase = () => {
               REQUEST DEMO
             </button>
           </div>
+
+          {/* Cross-Section Tech Tree Cord (Desktop Only) */}
+          {/* Drops from buttons, through the padding, to the edge of the section */}
+          <div className="hidden lg:block absolute top-[calc(100%+2rem)] left-1/2 w-[2px] h-48 bg-gradient-to-b from-[#486CD9]/30 to-[#486CD9]/0 -translate-x-1/2 z-0"></div>
         </div>
 
         {/* Right Points */}
