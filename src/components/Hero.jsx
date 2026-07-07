@@ -11,10 +11,10 @@ const Hero = () => {
       ></div>
       
       {/* Floating Data Cards (Flat 2D) */}
-      <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[480px] z-[4] pointer-events-none hidden lg:block">
+      <div className="absolute top-0 left-0 w-full h-full z-[4] pointer-events-none hidden lg:block">
          {/* Card 1: Efficacy */}
-         <motion.div 
-           className="absolute top-0 left-0 w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
+         <motion.div
+           className="absolute top-[42%] left-[19%] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
            animate={{ y: [0, -10, 0] }}
            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
          >
@@ -31,8 +31,8 @@ const Hero = () => {
          </motion.div>
 
          {/* Card 2: Speed */}
-         <motion.div 
-           className="absolute bottom-0 left-[60px] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
+         <motion.div
+           className="absolute top-[56%] left-[30%] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
            animate={{ y: [0, 8, 0] }}
            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
          >
@@ -52,8 +52,8 @@ const Hero = () => {
          </motion.div>
 
          {/* Card 3: Longevity */}
-         <motion.div 
-           className="absolute top-[30px] right-0 w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
+         <motion.div
+           className="absolute top-[42%] right-[19%] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
            animate={{ y: [0, -8, 0] }}
            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
          >
@@ -70,8 +70,8 @@ const Hero = () => {
          </motion.div>
 
          {/* Card 4: Comparison */}
-         <motion.div 
-           className="absolute bottom-[-20px] right-[60px] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
+         <motion.div
+           className="absolute top-[56%] right-[30%] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
            animate={{ y: [0, 10, 0] }}
            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
          >
