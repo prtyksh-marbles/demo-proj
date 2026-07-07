@@ -14,8 +14,8 @@ function App() {
       <Trust />
       <MeetEase />
       <HowItWorks />
-      <Testimonials />
       <Stats />
+      <Testimonials />
       <TestimonialMarquee />
     </div>
   );
