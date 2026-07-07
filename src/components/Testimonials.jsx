@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonials = () => {
   return (
-    <section className="bg-white py-32 px-4 sm:px-6 font-sans overflow-hidden">
+    <section className="bg-white pt-32 pb-6 px-4 sm:px-6 font-sans overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
         
         {/* Masonry Image Collage */}
