@@ -41,11 +41,14 @@ const HowItWorks = () => {
       <div className="max-w-[1200px] mx-auto">
         
         {/* Header */}
-        <div className="mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+        <div className="mb-16 text-center lg:text-left">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#486CD9]/20 text-[#486CD9] text-[0.7rem] font-bold tracking-[0.15em] uppercase mb-6 bg-[#486CD9]/10 shadow-sm">
+            The Process
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-[#132758] tracking-tight mb-4">
             How it works
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="text-[#5A6B8A] text-lg max-w-[600px] mx-auto lg:mx-0">
             Progress and peace of mind are right around the corner.
           </p>
         </div>
@@ -78,8 +81,12 @@ const HowItWorks = () => {
 
                   {/* Step Content */}
                   <div>
-                    <div className="text-[0.8rem] font-bold text-[#486CD9] mb-1 tracking-widest">{step.num}</div>
-                    <h3 className="font-display text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
+                    <div className="text-[0.75rem] font-bold text-[#486CD9] mb-1.5 tracking-[0.15em] uppercase">
+                      STEP {step.num}
+                    </div>
+                    <h3 className="text-gray-900 text-[1.25rem] font-semibold mb-2 tracking-tight">
+                      {step.title}
+                    </h3>
                     <p className="text-gray-500 text-[0.95rem] leading-relaxed">
                       {step.desc}
                     </p>
@@ -90,43 +97,53 @@ const HowItWorks = () => {
           </div>
 
           {/* Right Column: Visual Canvas */}
-          <div className="lg:w-7/12 bg-[#F8F9FA] rounded-[40px] relative overflow-hidden flex items-center justify-center p-8 border border-gray-100 shadow-sm min-h-[500px]">
+          <div className="lg:w-7/12 relative flex items-center justify-center min-h-[500px]">
+            
+            {/* The Blue Aura (Constant background tying it to MeetEase) */}
+            <div className="absolute inset-0 w-[140%] h-[140%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle_at_center,rgba(72,108,217,0.15)_0%,transparent_60%)] pointer-events-none -z-10"></div>
+
             <AnimatePresence mode="wait">
               
               {/* Visual 1: Connect */}
               {activeStep === 0 && (
                 <motion.div 
                   key="v1"
-                  className="w-full h-full relative flex flex-col items-center justify-center gap-8"
+                  className="w-full h-full relative flex flex-col items-center justify-center"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.6 }}
                 >
-                  {/* Map and Doctors */}
-                  <div className="relative w-full max-w-sm aspect-video bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-                    <img src="/map.png" alt="Map" className="absolute inset-0 w-full h-full object-cover opacity-60" />
-                    <div className="absolute inset-0 flex items-center justify-center bg-white/40 backdrop-blur-[2px]">
-                      <div className="flex -space-x-3">
-                        {[1, 2, 3, 4].map(num => (
-                          <img key={num} src={`/doctor-${num}.png`} alt={`Doctor ${num}`} className="w-14 h-14 rounded-full border-2 border-white shadow-md object-cover" />
-                        ))}
+                  {/* Premium iOS Widget Card */}
+                  <div className="relative w-full max-w-[420px] bg-white rounded-[2rem] shadow-[0_20px_40px_rgba(72,108,217,0.15)] overflow-hidden border-4 border-white p-2">
+                    
+                    {/* Top: Map Section */}
+                    <div className="relative w-full aspect-[16/9] bg-gray-100 rounded-[1.5rem] overflow-hidden">
+                      <img src="/map.png" alt="Map" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                      {/* Frosted Glass Overlay with Doctors */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center bg-white/70 backdrop-blur-md px-5 py-2.5 rounded-full shadow-lg border border-white/60 w-max">
+                        <div className="flex -space-x-3 mr-4">
+                          {[1, 2, 3, 4].map(num => (
+                            <img key={num} src={`/doctor-${num}.png`} alt={`Doctor ${num}`} className="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover" />
+                          ))}
+                        </div>
+                        <div className="text-[#132758] text-[0.8rem] font-bold tracking-tight">
+                          Expert Clinical Team
+                        </div>
                       </div>
                     </div>
-                    <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-[#486CD9] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md whitespace-nowrap">
-                      Our Fruitful Guides
-                    </div>
-                  </div>
 
-                  {/* Pills */}
-                  <div className="flex gap-4">
-                    <div className="bg-white px-5 py-2.5 rounded-full shadow-md border border-gray-100 font-semibold text-gray-700 text-sm flex items-center gap-2">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-[#486CD9]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                      +1 (800) 123-4567
+                    {/* Bottom: Action Buttons inside the widget */}
+                    <div className="flex gap-2 mt-2">
+                      <div className="flex-1 bg-[#F8FAFC] px-4 py-4 rounded-2xl flex items-center justify-center gap-2 text-[#5A6B8A] font-semibold text-[0.8rem] hover:bg-gray-100 transition-colors cursor-pointer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-[#486CD9]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call
+                      </div>
+                      <div className="flex-[2] bg-[#486CD9] text-white px-4 py-4 rounded-2xl shadow-[0_8px_16px_rgba(72,108,217,0.25)] font-semibold text-[0.85rem] flex items-center justify-center cursor-pointer hover:bg-[#3A5BBE] transition-all hover:-translate-y-0.5">
+                        Book Home Setup
+                      </div>
                     </div>
-                    <div className="bg-[#132758] text-white px-5 py-2.5 rounded-full shadow-md font-semibold text-sm cursor-pointer hover:bg-[#1a3579] transition-colors">
-                      Book Appointment
-                    </div>
+
                   </div>
                 </motion.div>
               )}
@@ -141,10 +158,10 @@ const HowItWorks = () => {
                   exit={{ opacity: 0, scale: 1.05 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="w-full sm:w-1/2 aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative">
+                  <div className="w-full sm:w-1/2 aspect-[4/5] bg-gray-200 rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(72,108,217,0.15)] border-4 border-white relative z-10">
                      <video src="/earlobes.mp4" autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
                   </div>
-                  <div className="w-full sm:w-1/2 aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative">
+                  <div className="w-full sm:w-1/2 aspect-[4/5] bg-gray-200 rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(72,108,217,0.15)] border-4 border-white relative z-10">
                      <video src="/ease.mp4" autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
                   </div>
                 </motion.div>
@@ -161,7 +178,7 @@ const HowItWorks = () => {
                   transition={{ duration: 0.6 }}
                   style={{ perspective: 1000 }}
                 >
-                  <div className="w-full max-w-lg aspect-video bg-gray-200 rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative">
+                  <div className="w-full max-w-lg aspect-video bg-gray-200 rounded-[2rem] overflow-hidden shadow-[0_30px_60px_rgba(72,108,217,0.2)] border-4 border-white relative z-10">
                      <video src="/3.mp4" autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
                   </div>
                 </motion.div>
@@ -177,30 +194,30 @@ const HowItWorks = () => {
                   exit={{ opacity: 0, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 >
-                  {/* Mockup Dashboard */}
-                  <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-6 border border-gray-100">
+                  {/* Mockup Dashboard Card */}
+                  <div className="w-full max-w-md bg-white rounded-[2.5rem] shadow-[0_30px_60px_rgba(72,108,217,0.15)] p-8 border-4 border-white relative z-10">
                     <div className="flex justify-between items-center mb-6">
-                      <div className="font-bold text-gray-800">Session Report</div>
-                      <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Optimal</div>
+                      <div className="font-display font-bold text-[#132758] text-xl">Session Report</div>
+                      <div className="bg-[#486CD9]/10 text-[#486CD9] text-xs font-bold px-3 py-1.5 rounded-full tracking-wide uppercase">Optimal</div>
                     </div>
                     {/* Fake Chart */}
-                    <div className="h-32 w-full bg-gray-50 rounded-xl mb-6 relative overflow-hidden flex items-end">
-                      <svg viewBox="0 0 100 40" preserveAspectRatio="none" className="w-full h-full absolute inset-0 text-[#486CD9] opacity-20">
+                    <div className="h-32 w-full bg-[#F8FAFC] rounded-2xl mb-8 relative overflow-hidden flex items-end">
+                      <svg viewBox="0 0 100 40" preserveAspectRatio="none" className="w-full h-full absolute inset-0 text-[#486CD9] opacity-10">
                         <path d="M0 40 L0 20 Q10 10 20 25 T40 15 T60 25 T80 5 T100 15 L100 40 Z" fill="currentColor" />
                       </svg>
                       <svg viewBox="0 0 100 40" preserveAspectRatio="none" className="w-full h-full absolute inset-0 text-[#486CD9]">
-                         <path d="M0 40 L0 20 Q10 10 20 25 T40 15 T60 25 T80 5 T100 15 L100 40 Z" fill="none" stroke="currentColor" strokeWidth="1" />
+                         <path d="M0 40 L0 20 Q10 10 20 25 T40 15 T60 25 T80 5 T100 15 L100 40 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
                       </svg>
                     </div>
                     {/* Fake Metrics */}
                     <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-gray-50 p-3 rounded-xl border border-gray-100">
-                        <div className="text-xs text-gray-500 mb-1">Prefrontal Targeting</div>
-                        <div className="font-bold text-gray-800">98% Accuracy</div>
+                      <div className="bg-[#F8FAFC] p-4 rounded-2xl border border-white">
+                        <div className="text-[0.75rem] text-[#5A6B8A] mb-1 font-semibold uppercase tracking-wider">Targeting</div>
+                        <div className="font-bold text-[#132758] text-lg">98.4%</div>
                       </div>
-                      <div className="bg-gray-50 p-3 rounded-xl border border-gray-100">
-                        <div className="text-xs text-gray-500 mb-1">Alpha Waves</div>
-                        <div className="font-bold text-[#486CD9]">+42% Boost</div>
+                      <div className="bg-[#486CD9] p-4 rounded-2xl border border-white shadow-[0_10px_20px_rgba(72,108,217,0.2)]">
+                        <div className="text-[0.75rem] text-white/80 mb-1 font-semibold uppercase tracking-wider">Alpha Waves</div>
+                        <div className="font-bold text-white text-lg">+42% Boost</div>
                       </div>
                     </div>
                   </div>

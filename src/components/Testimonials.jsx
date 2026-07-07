@@ -2,11 +2,11 @@ import React from 'react';
 
 const Testimonials = () => {
   return (
-    <section className="bg-white py-32 px-4 sm:px-6 font-sans overflow-hidden">
+    <section className="bg-white pt-32 pb-6 px-4 sm:px-6 font-sans overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
         
         {/* Masonry Image Collage */}
-        <div className="relative flex justify-center items-center gap-3 sm:gap-5 md:gap-6 mb-6 max-w-[1050px] mx-auto px-2">
+        <div className="relative flex justify-center items-center gap-3 sm:gap-5 md:gap-6 max-w-[1050px] mx-auto px-2 mb-10">
           
           {/* Fade masks for top and bottom if images overflow, optional but looks nice */}
           <div className="absolute inset-0 pointer-events-none z-10 [mask-image:linear-gradient(to_bottom,white_0%,transparent_5%,transparent_95%,white_100%)] bg-white opacity-0" />
@@ -38,11 +38,11 @@ const Testimonials = () => {
         </div>
 
         {/* Text Block */}
-        <div className="text-center max-w-[750px] mx-auto px-4">
-          <h2 className="font-display text-4xl md:text-[3.5rem] font-bold text-gray-900 leading-[1.15] tracking-tight mb-8">
+        <div className="text-center max-w-[750px] mx-auto px-4 relative z-20">
+          <h2 className="font-display text-4xl md:text-[3.5rem] font-bold text-[#132758] leading-[1.15] tracking-tight mb-6">
             Loved by patients,<br />not just labs.
           </h2>
-          <p className="text-gray-500 text-lg md:text-[1.1rem] leading-relaxed max-w-[600px] mx-auto">
+          <p className="text-[#5A6B8A] text-lg md:text-[1.1rem] leading-relaxed max-w-[600px] mx-auto">
             Don't take our word for it. See why EASE is trusted and loved by people across India who want to regain their mental balance, find focus, and heal naturally.
           </p>
         </div>

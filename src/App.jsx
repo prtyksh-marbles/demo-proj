@@ -2,11 +2,11 @@ import React from 'react';
 import Hero from './components/Hero';
 import Trust from './components/Trust';
 import MeetEase from './components/MeetEase';
-import Technologies from './components/Technologies';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
 import Stats from './components/Stats';
 import TestimonialMarquee from './components/TestimonialMarquee';
+import AIIMSStudy from './components/AIIMSStudy';
 
 function App() {
   return (
@@ -14,11 +14,11 @@ function App() {
       <Hero />
       <Trust />
       <MeetEase />
-      <Technologies />
       <HowItWorks />
-      <Testimonials />
       <Stats />
+      <Testimonials />
       <TestimonialMarquee />
+      <AIIMSStudy />
     </div>
   );
 }
