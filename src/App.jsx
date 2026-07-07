@@ -6,6 +6,7 @@ import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
 import Stats from './components/Stats';
 import TestimonialMarquee from './components/TestimonialMarquee';
+import AIIMSStudy from './components/AIIMSStudy';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Stats />
       <Testimonials />
       <TestimonialMarquee />
+      <AIIMSStudy />
     </div>
   );
 }

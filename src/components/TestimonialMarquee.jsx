@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 const testimonials = [
   {
@@ -44,6 +44,23 @@ const testimonials = [
 ];
 
 const TestimonialMarquee = () => {
+  // Only animate while the marquee is actually on screen. A 60s infinite
+  // animation otherwise keeps the compositor busy forever, which pegs the CPU
+  // on machines without hardware acceleration.
+  const marqueeRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = marqueeRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: '200px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   // Ultra-compact, professional card design
   const renderCard = (item, idx) => {
     return (
@@ -118,19 +135,30 @@ const TestimonialMarquee = () => {
       <style>
         {`
           @keyframes marquee-slow {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
           }
           .animate-marquee-slow {
             animation: marquee-slow 60s linear infinite;
+            /* Promote to its own compositor layer once, so frames don't repaint */
+            will-change: transform;
+            backface-visibility: hidden;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .animate-marquee-slow { animation: none; }
           }
         `}
       </style>
 
       {/* Marquee Wrapper */}
-      <div className="w-full relative flex overflow-hidden group [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-        {/* We use items-stretch so all cards match height, and our slow animation */}
-        <div className="flex w-max animate-marquee-slow items-stretch gap-5 md:gap-6 py-6 hover:[animation-play-state:paused]">
+      <div ref={marqueeRef} className="w-full relative flex overflow-hidden group">
+        {/* Static edge fades (cheaper than masking the moving content every frame) */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-[6%] z-10 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[6%] z-10 bg-gradient-to-l from-white to-transparent" />
+
+        {/* We use items-stretch so all cards match height, and our slow animation.
+            Animation pauses on hover and whenever the section is scrolled off screen. */}
+        <div className={`flex w-max animate-marquee-slow items-stretch gap-5 md:gap-6 py-6 hover:[animation-play-state:paused] ${inView ? '' : '[animation-play-state:paused]'}`}>
           {[...cardElements, ...cardElements].map((el, i) => React.cloneElement(el, { key: `duplicate-${i}` }))}
         </div>
       </div>
