@@ -181,7 +181,7 @@ const MeetEase = () => {
         {/* Top Header */}
         <div className="max-w-3xl mx-auto text-center mb-8">
           <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#486CD9]/20 text-[#486CD9] text-[0.7rem] font-bold tracking-[0.15em] uppercase mb-8 bg-[#486CD9]/10 shadow-sm">
-            Medically Licensed Neuromodulation
+            Medically Licensed Neuromodulation Device
           </div>
           <h2 className="font-display text-[4rem] text-[#132758] font-medium leading-none mb-6 tracking-tight">
             Meet EASE
