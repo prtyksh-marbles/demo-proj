@@ -10,17 +10,17 @@ const Hero = () => {
         style={{ backgroundImage: "url('/cloud.png')" }}
       ></div>
       
-      {/* Floating Data Cards (Flat 2D) */}
-      <div className="absolute top-0 left-0 w-full h-full z-[4] pointer-events-none hidden lg:block">
+      {/* Data Cards (Row) */}
+      <div className="absolute top-[40%] left-0 w-full z-[4] pointer-events-none hidden lg:flex justify-around px-10">
+         <div className="flex gap-6">
          {/* Card 1: Efficacy */}
          <motion.div
-           className="absolute top-[42%] left-[19%] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
-           animate={{ y: [0, -10, 0] }}
-           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+           className="w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
+           style={{ transform: "perspective(1000px) rotateY(15deg)" }}
          >
            <div className="flex flex-col">
              <div className="text-[3rem] font-display font-bold text-[#486CD9] leading-none tracking-tighter">63.8%</div>
-             <div className="text-[0.85rem] text-[#555] font-medium mt-2 leading-snug">Reduction in<br/>depressive symptoms</div>
+             <div className="text-[0.85rem] text-[#555] font-medium mt-2 leading-snug">Average reduction in<br/>depression severity</div>
            </div>
            <div className="h-[70px] w-full mt-3 flex items-end">
               <svg viewBox="0 0 100 50" className="w-full h-full stroke-[#486CD9] overflow-visible" fill="none" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
@@ -32,13 +32,12 @@ const Hero = () => {
 
          {/* Card 2: Speed */}
          <motion.div
-           className="absolute top-[56%] left-[30%] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
-           animate={{ y: [0, 8, 0] }}
-           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+           className="w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
+         
          >
            <div className="flex flex-col">
-             <div className="text-[3rem] font-display font-bold text-[#486CD9] leading-none tracking-tighter">35%</div>
-             <div className="text-[0.85rem] text-[#555] font-medium mt-2 leading-snug">Improvement after<br/>just 10 sessions</div>
+             <div className="text-[3rem] font-display font-bold text-[#486CD9] leading-none tracking-tighter">60%</div>
+             <div className="text-[0.85rem] text-[#555] font-medium mt-2 leading-snug">Of patients reached<br/>clinical remission</div>
            </div>
            <div className="h-[70px] w-full mt-3 flex items-end gap-[6px]">
               <div className="flex-1 bg-[#e8edfc] rounded-t-md h-[30%]"></div>
@@ -50,16 +49,16 @@ const Hero = () => {
               <div className="flex-1 bg-[#f0f0f0] rounded-t-md h-[10%] opacity-50"></div>
            </div>
          </motion.div>
+         </div>
 
+         <div className="flex gap-6">
          {/* Card 3: Longevity */}
          <motion.div
-           className="absolute top-[42%] right-[19%] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
-           animate={{ y: [0, -8, 0] }}
-           transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+           className="w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
          >
            <div className="flex flex-col">
-             <div className="text-[3rem] font-display font-bold text-[#00838f] leading-none tracking-tighter">80%</div>
-             <div className="text-[0.85rem] text-[#555] font-medium mt-2 leading-snug">Benefits maintained<br/>at follow-up</div>
+             <div className="text-[3rem] font-display font-bold text-[#00838f] leading-none tracking-tighter">33.3%</div>
+             <div className="text-[0.85rem] text-[#555] font-medium mt-2 leading-snug">Improvement already<br/>visible by Day 5</div>
            </div>
            <div className="h-[70px] w-full mt-3 flex items-end">
               <svg viewBox="0 0 100 50" className="w-full h-full stroke-[#00838f] overflow-visible" fill="none" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
@@ -71,13 +70,12 @@ const Hero = () => {
 
          {/* Card 4: Comparison */}
          <motion.div
-           className="absolute top-[56%] right-[30%] w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
-           animate={{ y: [0, 10, 0] }}
-           transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+           className="w-[220px] h-[220px] p-6 flex flex-col justify-between rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl bg-white/95 border border-white/80 pointer-events-auto"
+           style={{ transform: "perspective(1000px) rotateY(-15deg)" }}
          >
            <div className="flex flex-col">
-             <div className="text-[3rem] font-display font-bold text-[#00838f] leading-none tracking-tighter">84%</div>
-             <div className="text-[0.85rem] text-[#555] font-medium mt-2 leading-snug">Clinical response vs.<br/>standard treatment</div>
+             <div className="text-[3rem] font-display font-bold text-[#00838f] leading-none tracking-tighter">10</div>
+             <div className="text-[0.85rem] text-[#555] font-medium mt-2 leading-snug">Days total treatment<br/>duration (20 sessions)</div>
            </div>
            <div className="h-[70px] w-full mt-3 flex items-end gap-[12px] justify-center">
               <div className="flex flex-col justify-end items-center h-full w-[35%]">
@@ -88,14 +86,15 @@ const Hero = () => {
               </div>
            </div>
          </motion.div>
+         </div>
       </div>
 
       {/* Cutout Layer */}
       <motion.div 
-        className="absolute top-[9vh] -left-20 w-full h-full bg-top bg-no-repeat z-[5] pointer-events-none"
-        style={{ backgroundImage: "url('/cutout.png')" }}
+        className="absolute top-[20vh] left-0 w-full h-full bg-center bg-contain bg-no-repeat z-[5] pointer-events-none"
+        style={{ backgroundImage: "url('/new hero .png')" }}
         initial={{ opacity: 0, scale: 0.60 }}
-        animate={{ opacity: 1, scale: 0.8}}
+        animate={{ opacity: 1, scale: 0.7}}
         transition={{ duration: 0.8, ease: "easeOut" }}
       ></motion.div>
 
@@ -145,10 +144,10 @@ const Hero = () => {
         transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
       >
         <h1 className="font-display text-[3rem] font-bold m-0 max-w-[850px] leading-[1.1] tracking-tight">
-          Overcome Depression.<br/><span className="text-[#486CD9]">Without Medication.</span>
+          Breakthrough Neuro Psychiatry Care.<br/><span className="text-[#486CD9]">With or Without Medication.</span>
         </h1>
         <p className="text-[1rem] font-medium text-[#444] max-w-[700px] mx-auto mt-[25px] mb-[35px] leading-[1.5]">
-          India's first CDSCO-approved neuromodulation device. EASE combines gentle brain<br/>stimulation with cognitive training to deliver a <span className="font-bold text-[#222]">63.8% reduction</span> in depressive symptoms.
+          In a clinical study conducted at AIIMS Delhi, patients using the EASE protocol saw rapid, clinically measured improvement. <span className="font-bold text-[#222]">India's first CDSCO-approved</span> neuromodulation device.
         </p>
         <motion.button 
           whileHover={{ scale: 1.05 }}
@@ -173,31 +172,41 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
       >
-        <div className="flex flex-col">
-            <h2 className="text-[4.5rem] text-[#486CD9] m-0 font-semibold leading-[1] tracking-tighter">84%</h2>
-            <p className="text-[#333] text-[1rem] my-[10px] font-semibold flex items-center gap-2">
-              Clinical response rate
-              <span className="bg-[#e8edfc] text-[#486CD9] text-xs px-2 py-0.5 rounded-full font-bold">vs. Treatment-as-usual</span>
-            </p>
-            <p className="text-sm text-[#666] m-0">Backed by 30 years of research at AIIMS & NIMHANS</p>
-        </div>
+        <a 
+          href="https://youtu.be/H9sivqJIm_8?si=b6Xwwcdj83MRL17y" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-6 cursor-pointer no-underline group"
+        >
+            <div className="relative w-[240px] aspect-video rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-black/5 group-hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 shrink-0">
+                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: "url('/thumbnail.jpg')" }}></div>
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#486CD9] shadow-md group-hover:scale-110 transition-transform duration-300">
+                        <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 ml-1">
+                            <path d="M5 3l14 9-14 9V3z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div className="flex flex-col">
+                <span className="text-[#486CD9] text-[0.8rem] font-bold tracking-wider uppercase mb-1.5">Watch Video</span>
+                <span className="text-[#222] text-[1.5rem] font-bold leading-[1.1] group-hover:text-[#486CD9] transition-colors">How EASE<br/>works</span>
+                <span className="text-[#555] text-[0.95rem] font-medium mt-2 leading-snug">Discover the science<br/>behind our care</span>
+            </div>
+        </a>
         
         <div className="flex flex-col items-end max-w-[320px]">
-            <div className="flex gap-1.5 mb-[20px]">
-                <div className="w-2 h-2 rounded-full bg-[#486CD9]"></div>
-                <div className="w-2 h-2 rounded-full bg-[#d0d0d0]"></div>
-                <div className="w-2 h-2 rounded-full bg-[#d0d0d0]"></div>
-            </div>
             <div className="flex items-center gap-5 mb-1.5">
                 <div className="flex">
                     <div className="w-10 h-10 rounded-full border-[3px] border-white ml-0 bg-[#fca5a5] bg-cover bg-center shadow-sm z-30" style={{ backgroundImage: "url('https://i.pravatar.cc/100?img=1')" }}></div>
                     <div className="w-10 h-10 rounded-full border-[3px] border-white -ml-4 bg-[#6ee7b7] bg-cover bg-center shadow-sm z-20" style={{ backgroundImage: "url('https://i.pravatar.cc/100?img=2')" }}></div>
                     <div className="w-10 h-10 rounded-full border-[3px] border-white -ml-4 bg-[#93c5fd] bg-cover bg-center shadow-sm z-10" style={{ backgroundImage: "url('https://i.pravatar.cc/100?img=3')" }}></div>
                 </div>
-                <h2 className="text-[2.5rem] text-[#222] m-0 font-bold tracking-tight">10,000+</h2>
+                <h2 className="text-[2.5rem] text-[#222] m-0 font-bold tracking-tight">13,000+</h2>
             </div>
             <p className="text-[0.9rem] text-[#555] m-0 mt-1 leading-[1.5] text-right font-medium">
-                Patients treated across 13,000+ sessions.<br/>9 out of 10 show measurable progress.
+                Sessions completed across India.<br/>9 out of 10 patients show measurable progress.
             </p>
         </div>
       </motion.div>

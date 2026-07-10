@@ -58,3 +58,31 @@ Brand/visual language
 Headline fonts: Instrument Sans, Instrument Serif, Manrope. Tone is clinical-meets-warm — "Safe & Effective Treatment for Mental Health Issues," "Rebalance your brain," "Join the Neuro Revolution" (clinician CTA), "Ready to experience the future of brain health?" (closing CTA everywhere).
 Social/contact
 Instagram, LinkedIn, YouTube (@MarblesHealth) linked; demo booking via Google Calendar link; care@marbles.health; several Tally.so forms embedded (likely lead gen / waitlist forms).
+
+---
+
+## Company background (from press/aggregators, cross-checked across multiple sources)
+
+**Founders & entity:** Co-founded in 2020 by Ramya Yellapragada (Founder/CEO) and Lakshay Sahni. Legal entity is Neuracle Health Private Limited. HQ New Delhi, secondary office Gurugram. ~11–50 employees (27 listed on LinkedIn), 17,700+ LinkedIn followers.
+
+**Backing:** Government/institutional backing from the Department of Biotechnology (Govt of India) and AIIMS New Delhi. Investors named across sources include Capital 2B and Whiteboard Capital. Funding-figure sources disagree wildly (one aggregator shows sub-$1M, another cites ~$2M raised) — **do not put a specific funding figure on the site without the founders confirming it.**
+
+**Recognition:** Both founders named to Forbes 30 Under 30 Asia — Healthcare & Science (2026 list).
+
+**Deployment scale — conflicting numbers across press, needs founder confirmation before using on-site:**
+- "75+ hospitals/clinics across India" (most commonly repeated figure)
+- "37 clinics ... with over 1,200 doctors actively engaged" (specific outlet, names CIP Ranchi, KMC Manipal, Mind and Brain Hospital)
+- Session-volume: "13,000+ sessions completed" (per marbles.health downloads page) vs. "18,000+ sessions in 10 months" (a mid-2026 press source) — these may simply be different snapshots in time, but pick one dated figure rather than mixing.
+
+**Roadmap mentioned in press (useful for a "what's next" section, not current-state claims):**
+- A more affordable direct-to-consumer (D2C) version of EASE
+- A separate motor-stimulation device for stroke/injury rehab
+- A companion app for cancer patients (distress/resilience support)
+- Expansion into broader neurology use cases
+- Growth target of ₹100cr ARR within 3 years (trade press, forward-looking — not a stat to present as current)
+
+**⚠️ Name-collision warning:** Search results repeatedly surface two unrelated companies with near-identical names — do not pull any facts from these for Marbles Health copy:
+1. **"Marble Health"** (no "s") — a US/NYC teen mental-health teletherapy startup founded by Jake Sussman, ~$20.5M raised, Khosla/Town Hall Ventures backed.
+2. **"Marble Medical"** — a US medical-device contract manufacturer later acquired by UFP Technologies.
+
+Both show up on Crunchbase/PitchBook/RocketReach searches for "Marble(s) Health" and are entirely unrelated to this company.
