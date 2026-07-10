@@ -7,6 +7,8 @@ import Testimonials from './components/Testimonials';
 import Stats from './components/Stats';
 import TestimonialMarquee from './components/TestimonialMarquee';
 import AIIMSStudy from './components/AIIMSStudy';
+import FAQ from './components/FAQ';
+import PartneredDoctors from './components/PartneredDoctors';
 
 function App() {
   return (
@@ -14,11 +16,13 @@ function App() {
       <Hero />
       <Trust />
       <MeetEase />
-      <HowItWorks />
       <Stats />
+      <HowItWorks />
       <Testimonials />
       <TestimonialMarquee />
+      <PartneredDoctors />
       <AIIMSStudy />
+      <FAQ />
     </div>
   );
 }
