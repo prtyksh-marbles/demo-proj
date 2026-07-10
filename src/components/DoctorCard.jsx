@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const DoctorCard = ({ name, title, imageSrc, logoSrc }) => {
   return (
-    <div className="relative w-[260px] md:w-[280px] h-[360px] bg-[#f4f6f9] rounded-2xl overflow-hidden group cursor-pointer border border-gray-100 flex-shrink-0 transition-shadow duration-300 hover:shadow-xl">
+    <div className="relative w-[340px] md:w-[380px] h-[420px] bg-[#f4f6f9] rounded-2xl overflow-hidden group cursor-pointer border border-gray-100 flex-shrink-0 transition-shadow duration-300 hover:shadow-xl">
       {/* Doctor Image */}
       <div 
         className="absolute inset-0 bg-contain bg-bottom bg-no-repeat transition-transform duration-500 group-hover:scale-[1.03]"

@@ -9,6 +9,7 @@ import TestimonialMarquee from './components/TestimonialMarquee';
 import AIIMSStudy from './components/AIIMSStudy';
 import FAQ from './components/FAQ';
 import PartneredDoctors from './components/PartneredDoctors';
+import PartneredDoctorsBottom from './components/PartneredDoctorsBottom';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <PartneredDoctors />
       <AIIMSStudy />
       <FAQ />
+      <PartneredDoctorsBottom />
     </div>
   );
 }
