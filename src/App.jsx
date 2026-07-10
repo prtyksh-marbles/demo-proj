@@ -10,6 +10,7 @@ import AIIMSStudy from './components/AIIMSStudy';
 import FAQ from './components/FAQ';
 import PartneredDoctors from './components/PartneredDoctors';
 import PartneredDoctorsBottom from './components/PartneredDoctorsBottom';
+import FinalCTA from './components/FinalCTA';
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
       <Testimonials />
       <TestimonialMarquee />
       <PartneredDoctors />
-      <AIIMSStudy />
       <FAQ />
+      <FinalCTA />
+      <AIIMSStudy />
       <PartneredDoctorsBottom />
     </div>
   );

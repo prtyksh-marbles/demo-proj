@@ -104,7 +104,7 @@ const PartneredDoctors = () => {
         </p>
         <div className="mt-8 flex justify-center">
           <a 
-            href="/doctors" 
+            href="http://localhost:3000/doctors/" 
             className="inline-block bg-[#486CD9] text-white px-10 py-3.5 rounded-full font-semibold text-[0.85rem] hover:bg-[#3A5BBE] transition-all shadow-[0_8px_20px_rgba(72,108,217,0.25)] hover:shadow-[0_12px_25px_rgba(72,108,217,0.35)] hover:-translate-y-1 uppercase tracking-wide"
           >
             Find a Doctor
@@ -139,8 +139,8 @@ const PartneredDoctors = () => {
           {states.map((state) => (
             <a 
               key={state}
-              href="#"
-              className="bg-[#f4f6f9] hover:bg-[#e4e7ec] text-[#444] text-[0.85rem] font-medium py-2 px-5 rounded-full transition-colors duration-200 cursor-pointer no-underline flex items-center"
+              href="http://localhost:3000/doctors/"
+              className="bg-[#f4f6f9] hover:bg-[#486CD9] text-[#444] hover:text-white text-[0.85rem] font-medium py-2 px-5 rounded-full transition-colors duration-200 cursor-pointer no-underline flex items-center"
             >
               {state}
             </a>
